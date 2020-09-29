@@ -236,53 +236,50 @@ getArtistByIndex(artists, 0);
 /**
 
 
-/* Task 4: Create a function called get20s() that takes data as an argument and returns an array with names of artists who were born in and died in 20th century
+/* Task 4: Create a function called get20s() that takes data as an argument and returns an 
+array with names of artists who were born in and died in 20th century
 (1900-2000) example born in 1901 and died in 1959 - included 
 / born in 1889 and died in 1925 not included - should return ["Salvador Dali", "Frida Kahlo"]*/
 
-/*function get20s(year){
-
-let yearIwasBorn=[];
-for(let i=0; i < artists.length; i++) {
-  if(artists[years].includes(1900)){
-    yearIwasBorn.push(artists[years]);
+function get20s(array){
+  const newArray = [];
+  for (i = 0; i < artists.length; i++){
+      if (artists[i].years === "1907 - 1954"){
+          newArray.push(artists[i].name);
+      } else if (artists[i].years === "1904 - 1989"){
+          newArray.push(artists[i].name)
+      } else {
+          console.log('not here');
+      }
   }
+
+ return newArray;
+    
 }
-console.log(yearIwasBorn);
-}
-get20s(1900);*/
-
-
-
-
-
-
-
+console.log("These are the names of the artist who were born in and died in 20th century: ", get20s(artists));
 
 /* Task 5: Create a function called `removeArtist` that takes two arguments:
 *     (1) artists array
 *     (2) a number which is the desired index in the array.
-* removeArtist removes an artist from the array at the index and console.logs the length of the remaining dataset.
+* removeArtist removes an artist from the array at the index and console.logs the length
+ of the remaining dataset.
 * 
 * For example, if removeArtist is invoked with the data and the number 0,
 * it will remove Amedeo Modigliani from our dataset and log the number 19. 
 * 
-* Note that sucessfully invoking this function multiple times without refreshing your browser will continuously remove artists 
+* Note that sucessfully invoking this function multiple times without refreshing your browser 
+will continuously remove artists 
 * from the array until there are none left. If you refresh your browser, the data will reset.  
 */
-function removeArtist(artists, desiredIndex)
-{
-var index = artists.indexOf(desiredIndex);
-if(index >-1) {
-  artists.splice(index, 1);
-} return artists;
 
-} console.log(removeArtist(artists,1));
+function removeArtist(array,i){
+  //delete artists[i];
+  artists.splice(i, 1)
+} removeArtist(artists,17);
+  console.log(artists);
 
-
-
-/**
-/* Task 6: Create a function called `addArtist` that can accept an object of information and add it to the artists array. 
+/* Task 6: Create a function called `addArtist` that can accept an object of information 
+and add it to the artists array. 
 Then, add a 21st artist to the array (you) with custom information!👩‍🎨👨‍🎨
 
 For example, you could add the following information: 
@@ -295,11 +292,21 @@ bio: Add 1-2 sentences (or use lorem ipsum)
 
 At the end, this function should return the new array with information added"*/
 
-function addArtist(/* Code here */){
 
-  /* Code here */
-
-}
+function addArtist(array,index){
+  let newArtist= artists.push(
+  {id: 20,
+  name: "Liliana Leyva",
+  years: "1986 - Present",
+  genre: "Web Design",
+  nationality: "Mexican-American",
+  bio: "I was born in Mexico. I am trying to learn how to code."}
+  );
+    return newArtist;
+  }
+  addArtist(artists,20);
+  console.log(artists);
+  
 
 /* Task 7: Create a function called lotsOfArt() that takes one argument: 
 
@@ -309,11 +316,25 @@ and returns an array with names of artists who painted more than 100 paintings.
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ..."Albrecht Dürer"]*/
 
-function lotsOfArt(/* Code here */){
+function lotsOfArt(artist){
+    const artistWhoPainted =[];
+    for(let i=0; i < artists.length; i++){
+      if(artists[i].paintings >= 100){
+        artistWhoPainted.push(artists[i].name);
+        
+      }
+      
+  } console.log ("Artist who painted more than a 100 paintings: ", artistWhoPainted);
+} console.log(lotsOfArt(artists));
+
+
+
+
+
+
 
 /* Code here */
 
-}
 
 
 
@@ -347,7 +368,8 @@ function getHTML(/* Code here */){
 }
 
 
-/* STRETCH 2: Create a function called `randomize` that takes a data array as an argument and returns a the same array in a randomized order. */
+/* STRETCH 2: Create a function called `randomize` that takes a data array as an argument 
+and returns a the same array in a randomized order. */
 
 function randomize(/* Code here */){
 
@@ -368,12 +390,31 @@ function randomize(/* Code here */){
 
 
 
-
-
-
-
-
-
 /* Questions and Answers*/
+/* 
 
-1.
+1. How would you describe acessibility on the web to someone new to programming?
+  Is when you design and code your website  making sure people with disabilities can use it.
+ 
+
+  2. Talk about 3 different things you can do to ensure your website is accessible.
+    Add alt text to all your images.
+    Use head tags correctly.
+    Make sure you can navigate the website using the keyboard.
+
+  3. How would you explain the concept of a variable to someone new to programming?
+    Is a memory location used to store values. There are different types( strings, booleans, integer).
+  
+    4. What is the purpose of using functions in code?
+    - To reuse code
+    - To get our code organized.
+    - You can test the code in small parts. 
+*/
+
+
+
+
+
+
+
+

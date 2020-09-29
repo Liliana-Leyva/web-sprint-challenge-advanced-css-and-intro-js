@@ -27,7 +27,9 @@ body{
     font-size:1.6rem;
     line-height: 1.5;
     font-family: 'Raleway', sans-serif;	
+    
 }
+
 h1, p, .name, .bio {	
     font-family: 'Raleway', sans-serif;	
     text-align: center;	
@@ -91,7 +93,7 @@ nav span{
     background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/John_Martin_-_The_Plains_of_Heaven_-_Google_Art_Project.jpg/1920px-John_Martin_-_The_Plains_of_Heaven_-_Google_Art_Project.jpg');		
     background-position: center;	
     color: white;	
-    width:80%;
+    width:50%;
     display:flex;
     flex-direction: column;
     justify-content: center;
@@ -103,7 +105,7 @@ nav span{
     opacity: 80%;	
 }	
 .title-container hr{
-    width:80%;
+    width:60%;
 }
 button{
     padding:1% 3%;
@@ -123,14 +125,110 @@ button:hover{
 .artists-container{
     display:flex;
     justify-content: space-around;
-    width:80%;
+    width: 65%;
     margin:0 auto;
 }
 
+
+
 .artist{
-    width:40%;
+    width:50%;
     text-align:center;
 }
 .artist img{
-    width:100%;
+    width:60%;
+    height: 40%;
+}
+
+.artist a{
+    font-size: 1.3em;
+}
+
+ .bio{
+    font-size: .8em;
+}
+
+@media  screen and(min-width:500px), (max-width:500px){
+
+   
+    nav{
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row;
+        width: 100%;
+        margin-right: 20%;
+        margin-left: 20%;
+       
+    }
+    nav a{
+        font-size: .9em;
+        padding-right: 1em;
+        padding-left: 1em;
+    }
+
+    button{
+        font-size: .8em;
+    }
+    
+    h1{
+        font-size: 2em;
+    }
+    
+    .title-container div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 450px;
+        height: 400px;
+        margin-left: 10%;
+        margin-right: 10%;
+       
+    
+    }
+
+    .title-container hr{
+        width:85%;
+    }
+    .artists-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .artist{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        padding: 0%;
+    }
+
+    .artist a{
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+
+    .artist div{
+        width: 100%;
+    }
+
+    .bio{
+        font-size: .5em;
+        align-items: stretch;
+    }
+    
+    .footer hr{
+
+        width: 85%;
+    }
+
+    footer{
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row;
+        width: 100%;
+        margin-right: 20%;
+        margin-left: 20%;
+       
+    }
 }
